@@ -1,120 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cadastro de Filmes</title>
-    </head>
-    <body>
-        <!--Cabeçalho-->
-        <table border="1" width="930px" align="center">
-            <tr>
-                <td height="80" width="100px">
-                    <figure align="left">
-                        <img src="../img/Logo_Chico.webp" alt="Logo_Chico" width="100px" height="auto" >
-                        <figcaption><font size="1">Shopping do Chico</font></figcaption>
-                    </figure>
-                </td>
 
-                <td align="right">
-                    <a href="index.html">Home</a> | 
-                    <a href="#">Cadastro</a>
-                </td>
-            </tr>
-        </table>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Filmes</title>
 
-        <!--Formulário de cadastro-->
-        <table  width="900px" align="center"> 
-            <tr>
-                <td colspan="3">
-                    <fieldset>
-                        <legend>Dados cadastrais</legend>
-                        <form>
-                            <label for="titulo">Título:</label> <br>
-                            <textarea name="titulo" cols="120" rows="1" tabindex="1" required></textarea> <br><br>
+    <link rel="stylesheet" href="../css/style-form.css">
+    <link rel="stylesheet" href="../css/style-index.css">
+</head>
 
-                            <label for="sinopse">Sinopse:</label> <br>
-                            <textarea name="sinopse" cols="120" rows="5" tabindex="2" required></textarea> <br> <br>
-                            
-                            <label for="capa">Capa:</label> <br>
-                            <input type="file" name="capa" tabindex="3" required>
-                        </form>
-                    </fieldset>
-                </td>
-            </tr>
+<body>
+    <div id="header">
+        <div id="logo">
+            <figure>
+                <img src="../img/Logo_Chico.webp" alt="Logo do Shopping" width="100px" height="auto">
+                <figcaption>Shopping do Chico</figcaption>
+            </figure>
+        </div>
+        <div id="menu">
+            <ul id="navegacao">
+                <li class="primeiro">
+                    <a id="filmes-exibicao" href="../html/index.html">Filmes em Exibição</a>
+                </li>
+                <li>
+                    <a id="cadastro" href="#">Cadastro de Filmes</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
-            <tr>
-                <td>
-                    <fieldset>
-                        <legend>Sala 1</legend>
-                        
-                        <label for="horarios">Horários:</label>
+    <div id="form-container">
+
+        <div id="form">
+            <form>
+                <label for="titulo">Título:</label> <br>
+                <textarea name="titulo" cols="120" rows="1" tabindex="1" required></textarea> <br><br>
+
+                <label for="sinopse">Sinopse:</label> <br>
+                <textarea name="sinopse" cols="120" rows="5" tabindex="2" required></textarea> <br> <br>
+
+                <label for="capa">Capa:</label> <br>
+                <input type="file" name="capa" accept="image/*" tabindex="3" required>
+            
+                <div id="horarios">
+                    <div class="sala">
+                        <label for="sala1">Sala 1</label>
                         <select name="horarios" required tabindex="5">
-                            <option value=""></option>
+                            <option value="null">-</option>
                             <optgroup label="Tarde">
                                 <option value="-">14:00</option>
                                 <option value="">16:00</option>
                             </optgroup>
-
+        
                             <optgroup label="Noite">
                                 <option value="">19:30</option>
                                 <option value="">21:00</option>
                             </optgroup>
                         </select>
-                    </fieldset>
-                </td>
-
-                <td>
-                    <fieldset>
-                        <legend>Sala 2</legend>
-
-                        <label for="horarios">Horários:</label>
+                    </div>
+        
+                    <div class="sala">
+                        <label for="sala2">Sala 2</label>
                         <select name="horarios" required tabindex="5">
-                            <option value=""></option>
+                            <option value="null">-</option>
                             <optgroup label="Tarde">
                                 <option value="-">14:00</option>
                                 <option value="">16:00</option>
                             </optgroup>
-
+        
                             <optgroup label="Noite">
                                 <option value="">19:30</option>
                                 <option value="">21:00</option>
                             </optgroup>
                         </select>
-                    </fieldset>
-
-                    
-                </td>
-
-                <td>
-
-                    <fieldset>
-                        <legend>Sala 3</legend>
-
-                        <label for="horarios">Horários:</label>
+                    </div>
+        
+                    <div class="sala">
+                        <label for="sala3">Sala 3</label>
                         <select name="horarios" required tabindex="5">
-                            <option value=""></option>
+                            <option value="null">-</option>
                             <optgroup label="Tarde">
                                 <option value="-">14:00</option>
                                 <option value="">16:00</option>
                             </optgroup>
-
+        
                             <optgroup label="Noite">
                                 <option value="">19:30</option>
                                 <option value="">21:00</option>
                             </optgroup>
                         </select>
-                    </fieldset>
-                </td>
-            </tr>
-
-            <tr>
-                <td colspan="3" align="center"> <br>
-                    <input type="submit" value="Cadastrar">
-                </td>
-            </tr>
-
-        </table>
-    </body>
-    </html>
+                    </div>
+                </div>
+                <div id="submit">
+                    <footer id="footer-submit">
+                        <input type="submit" value="Cadastrar">
+                    </footer>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
